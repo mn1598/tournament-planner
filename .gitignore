@@ -33,3 +33,6 @@
 
 metrics.interim
 /.env
+/venv/
+/mongo-volume/diagnostic.data/metrics.2023-08-22T07-06-48Z-00000
+/.idea/vcs.xml

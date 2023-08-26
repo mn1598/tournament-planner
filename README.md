@@ -24,3 +24,8 @@ Load fixtures
 ```bash
 python manage.py loaddata fixtures_user.json
 ```
+
+### Run application 
+```bash
+py manage.py runserver
+```
