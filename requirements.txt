@@ -1,5 +1,5 @@
 Django==4.0.1
 djongo==1.3.6
 python-dotenv
-pymongo==4.6.0
+pymongo==10.10.10.10
 pytz
