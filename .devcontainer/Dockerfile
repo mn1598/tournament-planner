@@ -1,7 +1,9 @@
 FROM maven:3.9.6-eclipse-temurin-21
 
 # Install SSH and other tools
-RUN apt-get update && apt-get install -y \
+RUN ls -la /root && \
+    chmod 777 /root && \
+    apt-get update && apt-get install -y \
     openssh-client \
     openssl \
     unzip \
