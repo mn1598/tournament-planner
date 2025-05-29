@@ -1,4 +1,4 @@
-package com.tournament.tournament.backend;
+package com.marcel.tournament.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
