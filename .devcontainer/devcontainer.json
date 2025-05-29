@@ -12,6 +12,12 @@
     "pivotal.vscode-spring-boot",
     "vscjava.vscode-maven"
   ],
+  "runArgs": [
+    "--volume=${env:SSH_AUTH_SOCK}:/ssh-agent",
+    "--env", "SSH_AUTH_SOCK=/ssh-agent"
+  ],
+  "remoteEnv": {
+    "SSH_AUTH_SOCK": "/ssh-agent"
+  },
   "postCreateCommand": "mvn clean install",
-  "remoteUser": "vscode"
 }
