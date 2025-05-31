@@ -3,6 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "remoteUser": "root",
-  "postCreateCommand": "ssh -V || echo 'SSH not found' && mvnd -U -Dquickly -DskipTests clean install"
+  "runArgs": [ "--privileged" ],
+  "remoteUser": "rootless",
+  "postCreateCommand": "ssh -V || echo 'SSH not found' && mvnd -U -Dquickly -DskipTests clean install && dockerd-entrypoint.sh — experimental &"
 }
