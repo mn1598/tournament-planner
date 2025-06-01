@@ -1,11 +1,11 @@
-###
-GET {{url}}:{{port}}/api/tournaments
+### Get a list of all tournaments
+GET {{url}}:{{port}}/api/tournaments/
 
-###
+### Get all tournaments with a specific name
 GET {{url}}:{{port}}/api/tournaments/Elfmeterturnier
 
 ### Create a new tournament
-POST {{url}}:{{port}}/api/tournaments
+POST {{url}}:{{port}}/api/tournaments/
 Content-Type: application/json
 
 {
@@ -22,8 +22,20 @@ Content-Type: application/json
   }
 }
 
+> {%
+    client.test("Status code is 200", function () {
+        console.log(response)
+        client.assert(response.status === 200);
+    });
+
+    client.test("Check tournament name", function () {
+        const body = response.body;
+        client.assert(body.name === "Champions Cup");
+    });
+%}
+
 ### Update existing tournament
-PUT http://localhost:8080/api/tournaments/1
+PUT {{url}}:{{port}}/api/tournaments/1
 Content-Type: application/json
 
 {
@@ -39,3 +51,6 @@ Content-Type: application/json
     "coach": "Coach Y"
   }
 }
+
+### Delete existing tournament
+DELETE {{url}}:{{port}}/api/tournaments/delete/1

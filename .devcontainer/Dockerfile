@@ -18,10 +18,13 @@ RUN curl -L https://downloads.apache.org/maven/mvnd/${MVND_VERSION}/maven-mvnd-$
     ls && \
     mv maven-mvnd-${MVND_VERSION}-linux-amd64 /opt/mvnd && \
     ln -s /opt/mvnd/bin/mvnd /usr/local/bin/mvnd && \
-    rm mvnd.zip
+    rm mvnd.zip && \
+    git config --global --add safe.directory /IdeaProjects/tournament-planner
 
 # Set up a non-root user
 #RUN useradd -ms /bin/bash vscode && chown -R vscode /home/vscode
 #USER vscode
 
 ENV PATH="/opt/mvnd/bin:$PATH"
+
+EXPOSE 8080
