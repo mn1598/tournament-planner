@@ -1,0 +1,41 @@
+###
+GET {{url}}:{{port}}/api/tournaments
+
+###
+GET {{url}}:{{port}}/api/tournaments/Elfmeterturnier
+
+### Create a new tournament
+POST {{url}}:{{port}}/api/tournaments
+Content-Type: application/json
+
+{
+  "name": "Champions Cup",
+  "startDate": "2025-07-01T10:00:00Z",
+  "endDate": "2025-07-10T18:00:00Z",
+  "location": {
+    "city": "Berlin",
+    "venue": "Olympiastadion"
+  },
+  "winner": {
+    "name": "Team A",
+    "coach": "Coach X"
+  }
+}
+
+### Update existing tournament
+PUT http://localhost:8080/api/tournaments/1
+Content-Type: application/json
+
+{
+  "name": "Champions Cup - Final",
+  "startDate": "2025-07-01T10:00:00Z",
+  "endDate": "2025-07-12T20:00:00Z",
+  "location": {
+    "city": "Berlin",
+    "venue": "Olympiastadion"
+  },
+  "winner": {
+    "name": "Team B",
+    "coach": "Coach Y"
+  }
+}
