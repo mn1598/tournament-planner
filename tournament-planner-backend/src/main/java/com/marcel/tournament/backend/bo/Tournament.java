@@ -10,6 +10,8 @@ import java.time.ZonedDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Tournament {
+    private static int idCounter = 1;
+    private Integer id = idCounter++;
     private String name;
     private ZonedDateTime startDate;
     private ZonedDateTime endDate; // Optional

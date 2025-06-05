@@ -30,12 +30,12 @@ public class TournamentController {
     }
 
     @PutMapping("/")
-    public Tournament putTournament(@RequestBody Tournament tournament) {
-        return tournamentService.updateTournament(tournament);
+    public void putTournament(@RequestBody Tournament tournament) {
+        tournamentService.updateTournament(tournament);
     }
 
     @DeleteMapping("/delete/{id}")
-    public Tournament deleteTournament(@PathVariable Integer id) {
+    public boolean deleteTournament(@PathVariable Integer id) {
         return tournamentService.deleteTournamentById(id);
     }
 

@@ -35,10 +35,11 @@ Content-Type: application/json
 %}
 
 ### Update existing tournament
-PUT {{url}}:{{port}}/api/tournaments/1
+PUT {{url}}:{{port}}/api/tournaments/
 Content-Type: application/json
 
 {
+  "id": 1,
   "name": "Champions Cup - Final",
   "startDate": "2025-07-01T10:00:00Z",
   "endDate": "2025-07-12T20:00:00Z",
