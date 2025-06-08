@@ -1,0 +1,1 @@
+Find logs in devcontainer in `/root/local/logs`
