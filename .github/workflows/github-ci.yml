@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: maven-artifacts
-          path: target/**
+          path: tournament-planner-backend/target
 
       - name: Generate JaCoCo badge
         id: jacoco
