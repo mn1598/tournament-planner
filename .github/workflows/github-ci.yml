@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: maven-artifacts
-          path: target
+          path: target/**
 
       - name: Generate JaCoCo badge
         id: jacoco
